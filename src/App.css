@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+.Board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 52vw;
+  box-shadow: 7px 5px 15px 3px rgba(0, 0, 0, 0.9);
+  border: 8px solid burlywood;
+  background-color: bisque;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Square {
+  border: 4px solid burlywood;
+  height: 18vh;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-size: 5rem;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.Panel {
+  margin: 3vh 14%;
+  width: 70%;
+  padding: 0.75rem;
+  box-shadow: 7px 5px 15px 3px rgba(0, 0, 0, 0.9);
+  background-color: lightgoldenrodyellow;
+  border: 8px solid burlywood;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Header {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.Panel button {
+  display: block;
+  margin: 0 auto;
+  font-size: 1rem;
+  background-color: bisque;
+  border: 5px solid chocolate;
+  padding: 0.5em;
+  font-weight: 600;
+}
+
+.Panel button:hover {
+  background-color: chocolate;
+}
+
+@media (max-width: 687px) {
+  .Header {
+    font-size: 1em;
   }
-  to {
-    transform: rotate(360deg);
+  .Square {
+    height: 15vw;
+  }
+}
+
+@media (max-width: 415px) {
+  .Square {
+    font-size: 3rem;
+    height: 12vw;
+  }
+  .Panel {
+    font-size: 0.75rem;
+  }
+  .Panel button {
+    font-size: 0.75rem;
   }
 }
